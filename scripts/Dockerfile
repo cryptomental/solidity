@@ -1,4 +1,6 @@
-FROM alpine
+from buildpack-deps:artful
+
+RUN apt-get -qq update && apt-get -qy install ccache cmake libboost-all-dev libz3-dev lsb-release sudo
 MAINTAINER chriseth <chris@ethereum.org>
 #Official solidity docker image
 
